@@ -21,7 +21,16 @@
           <input type="text" id="lastName" required />
         </label>
         <label>เบอร์โทรศัพท์
-          <input type="tel" id="phone" required />
+          <input
+            type="tel"
+            id="phone"
+            required
+            inputmode="numeric"
+            maxlength="10"
+            autocomplete="tel"
+            title="กรอกตัวเลข 10 หลัก"
+          />
+          <div id="phoneError" class="error-msg hidden">เบอร์โทรศัพท์ต้องมี 10 หลัก</div>
         </label>
         <label>Email
           <input type="email" id="email" required />
