@@ -113,3 +113,6 @@ select,
 textarea {
   font-family: "Kanit", sans-serif;
 }
+
+.input-error { border-color: #dc2626 !important; }
+.error-msg { color: #dc2626; font-size: 13px; margin-top: 6px; }
