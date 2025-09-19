@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz ทายใจสไตล์การลงทุน</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <!-- Section 1 Landing page -->
+    <section id="landing" class="section">
+      <h1>Quiz ทายใจ สไตล์การลงทุน</h1>
+      <img class="hero" src="Quiz ทายใจ.png" alt="Quiz ทายใจ" />
+      <form id="userForm" class="card">
+        <label>ชื่อ
+          <input type="text" id="firstName" required />
+        </label>
+        <label>นามสกุล
+          <input type="text" id="lastName" required />
+        </label>
+        <label>เบอร์โทรศัพท์
+          <input type="tel" id="phone" required />
+        </label>
+        <label>Email
+          <input type="email" id="email" required />
+        </label>
+        <button type="submit" id="startBtn">เริ่มทำแบบทดสอบ</button>
+      </form>
+    </section>
+
+    <!-- Section 2 Question page -->
+    <section id="questions" class="section hidden">
+      <h2>ตอบคำถาม 5 ข้อ</h2>
+      <form id="quizForm" class="card">
+        <div class="q">
+          <p>1. คุณตื่นนอนเวลาไหน</p>
+          <label><input type="radio" name="q1" value="1" /> A. ตื่นสายบ้าง เน้นได้นอนเต็มอิ่ม</label>
+          <label><input type="radio" name="q1" value="2" /> B. ตื่นแต่เช้าตรู่ เพื่อจะได้มีเวลาเตรียมตัวเยอะ</label>
+          <label><input type="radio" name="q1" value="3" /> C. ตื่นเช้ามืด ไปถึงที่ทำงาน/มหาวิทยาลัยก่อนคนอื่น</label>
+        </div>
+
+        <div class="q">
+          <p>2. กิจวัตรในยามเช้าเป็นอย่างไร</p>
+          <label><input type="radio" name="q2" value="1" /> A. กินอาหารง่าย ๆ เน้นความไว พร้อมลุยงานทันที</label>
+          <label><input type="radio" name="q2" value="2" /> B. กินอาหารเช้าแบบเดิมทุกวัน และเช็คข่าวสารยามเช้า</label>
+          <label><input type="radio" name="q2" value="3" /> C. กินอาหารเช้าที่ดีต่อสุขภาพ และออกกำลังกายเป็นประจำ</label>
+        </div>
+
+        <div class="q">
+          <p>3. สไตล์การทำงานของคุณเป็นแบบไหน</p>
+          <label><input type="radio" name="q3" value="1" /> A. เน้นทำงานเป็นทีม มีระบบชัดเจน ทำหน้าที่ตามที่ได้รับมอบหมาย</label>
+          <label><input type="radio" name="q3" value="2" /> B. ชอบทำงานแบบลุยเดี่ยว ไม่คุยกับใคร มีสมาธิในการทำงานสูง</label>
+          <label><input type="radio" name="q3" value="3" /> C. เป็นฮีโรของทีม ทำงานหนักจนลืมดูเวลา</label>
+        </div>
+
+        <div class="q">
+          <p>4. หลังเลิกงาน/เรียน คุณใช้เวลาพักผ่อนอย่างไร</p>
+          <label><input type="radio" name="q4" value="1" /> A. พักผ่อนเงียบ ๆ คนเดียว ดูทีวี ไม่ก็เล่นมือถือ</label>
+          <label><input type="radio" name="q4" value="2" /> B. ใช้เวลากับครอบครัว ทำกิจกรรมต่าง ๆ ร่วมกัน</label>
+          <label><input type="radio" name="q4" value="3" /> C. ศึกษาหาความรู้ใหม่ ๆ และอ่านหนังสือที่ชอบ</label>
+        </div>
+
+        <div class="q">
+          <p>5. คุณมองเป้าหมายชีวิตของคุณไว้แบบไหน</p>
+          <label><input type="radio" name="q5" value="1" /> A. ชีวิตที่เรียบง่าย มั่นคง ไม่เดือดร้อนเรื่องเงิน</label>
+          <label><input type="radio" name="q5" value="2" /> B. ชีวิตที่มีอิสรภาพทางการเงิน ได้ทำในสิ่งที่อยากทำเต็มที่</label>
+          <label><input type="radio" name="q5" value="3" /> C. ชีวิตที่ร่ำรวย สุขสบาย ประสงความสำเร็จสูง</label>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="backBtn">ย้อนกลับ</button>
+          <button type="submit" id="submitBtn">ดูผลลัพธ์</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Section 3 Result page -->
+    <section id="result" class="section hidden">
+      <div class="card">
+        <p class="score">คุณได้ <span id="totalScore">0</span> คะแนน</p>
+        <p class="lead">โดยคุณเป็น</p>
+
+        <h3 id="catTitle" class="cat"></h3>
+        <img id="catImage" class="cat-img" alt="" />
+        <p id="catDesc" class="desc"></p>
+
+        <div class="funds">
+          <p class="funds-title">กองทุนที่เหมาะสม</p>
+          <ul id="fundList"></ul>
+        </div>
+
+        <p class="warning">คำเตือน ผู้ลงทุนควรทำความเข้าใจลักษณะสินค้า เงื่อนไขผลตอบแทน ความเสี่ยง ก่อนตัดสินใจลงทุน</p>
+
+        <div class="actions">
+          <button id="retryBtn">ทำแบบทดสอบใหม่</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

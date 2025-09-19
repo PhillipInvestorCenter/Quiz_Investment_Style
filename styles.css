@@ -1,0 +1,115 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Kanit", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f5f7fb;
+  color: #1f2937;
+}
+.container { max-width: 880px; margin: 0 auto; padding: 24px 16px; }
+.section { margin: 8px auto; }
+.hidden { display: none; }
+
+h1, h2, h3 { margin: 8px 0 16px; line-height: 1.25; }
+h1 { font-size: 28px; text-align: center; }
+h2 { font-size: 22px; }
+h3.cat { font-size: 24px; margin-top: 4px; }
+
+/* landing image use original size */
+.hero {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  margin: 12px 0 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px 16px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+}
+
+label { display: block; font-weight: 400; margin: 10px 0 8px; }
+input[type="text"], input[type="tel"], input[type="email"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+input:focus { border-color: #3b82f6; }
+
+.q { margin: 14px 0 18px; }
+.q p { margin: 0 0 8px; font-weight: 600; }
+.q label {
+  display: block;
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+.q input[type="radio"] { margin-right: 8px; }
+
+.actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 10px; }
+button {
+  appearance: none;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #1d4ed8;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Kanit", sans-serif;
+}
+button#backBtn { background: #6b7280; }
+button#retryBtn { background: #10b981; }
+button:disabled { opacity: .6; cursor: not-allowed; }
+
+.score { font-size: 20px; margin: 0 0 6px; }
+.lead { margin: 0 0 10px; font-size: 18px; }
+.desc { margin: 6px 0 14px; }
+
+.funds { margin-top: 8px; }
+.funds-title { margin: 0 0 6px; font-weight: 600; }
+#fundList { margin: 6px 0 0 16px; }
+#fundList li { margin: 4px 0; }
+
+.warning { margin-top: 16px; font-size: 14px; color: #6b7280; }
+
+.cat { padding: 6px 10px; border-radius: 10px; display: inline-block; }
+
+/* result categories new colors */
+.cat.chill { background: #ecfdf5; color: #059669; }   /* green */
+.cat.flex  { background: #fffbeb; color: #b45309; }   /* gold */
+.cat.brave { background: #fef2f2; color: #dc2626; }   /* red */
+
+/* result image use original size */
+.cat-img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 10px 0 6px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+}
+
+@media (min-width: 720px) {
+  .card { padding: 22px 20px; }
+  h1 { font-size: 32px; }
+  .hero { height: auto; }
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select,
+textarea {
+  font-family: "Kanit", sans-serif;
+}
