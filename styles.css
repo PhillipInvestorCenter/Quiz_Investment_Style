@@ -43,16 +43,35 @@ input[type="text"], input[type="tel"], input[type="email"] {
 }
 input:focus { border-color: #3b82f6; }
 
-.q { margin: 14px 0 18px; }
-.q p { margin: 0 0 8px; font-weight: 600; }
+/* clearer question blocks */
+.q {
+  margin: 28px 0;
+  padding: 14px 12px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid #3b82f6;
+  border-radius: 12px;
+}
+
+.q p {
+  margin: 0 0 10px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #111827;
+}
+
 .q label {
   display: block;
-  padding: 8px 10px;
+  background: #fff;
+  padding: 10px 12px;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
   margin-bottom: 8px;
   cursor: pointer;
 }
+
+.q label:hover { background: #f9fafb; border-color: #94a3b8; }
+
 .q input[type="radio"] { margin-right: 8px; }
 
 .actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 10px; }
